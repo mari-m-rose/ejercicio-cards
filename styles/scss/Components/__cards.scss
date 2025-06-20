@@ -4,7 +4,6 @@
         margin-bottom: 24px;
 
         h1 {
-            font-family: sans-serif;
             font-size: 44px;
 
         }
@@ -17,17 +16,23 @@
         &__item {
             width: 100%;
             margin-bottom: 24px;
-            box-shadow: 14px 10px 15px -3px rgba(0,0,0,0.1);
+            box-shadow: 14px 10px 15px -3px rgba(0, 0, 0, 0.1);
             transition: all .3s ease-in-out;
+
             &:hover {
                 transform: scale(1.05);
+
+                img {
+                    filter: grayscale(0%);
+                }
             }
-            
+
             @media only screen and (min-width: 768px) {
                 width: calc(100% / 3 - 16px);
                 margin-right: 16px;
+
                 &:last-child {
-                margin-right: 0px;
+                    margin-right: 0px;
                 }
             }
 
@@ -36,19 +41,18 @@
                 height: 300px;
                 object-fit: cover;
                 display: block;
+                filter: grayscale(100%);
             }
 
             .text {
                 padding: 24px;
-                
-                h3{
-                    font-family: sans-serif;
+
+                h3 {
                     font-size: 24px;
                     margin-bottom: 8px;
                 }
 
                 p {
-                    font-family: sans-serif;
                     font-size: 14px;
                 }
             }
